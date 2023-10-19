@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    -webkit-user-select: none;
 }
 body{
     background-color: #000405;
@@ -239,7 +240,7 @@ h2.titulo span{
 }
 .projetos .flex{
     justify-content: space-around;
-    margin-top: 0px;
+    margin-top: 15px;
 }
 .formulario{
     padding: 10vw 4%;
