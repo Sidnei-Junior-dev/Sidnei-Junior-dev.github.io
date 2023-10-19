@@ -2,12 +2,15 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
-    background-color: black;
+    background-color: #000405;
     height: 100vh;
+}
+html{
+    scroll-behavior: smooth;
 }
 .interface{
     max-width: 1280px;
@@ -16,6 +19,12 @@ body{
 header{
     padding: 40px 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #000405;
 }
 header>.interface{
     display: flex;
@@ -23,13 +32,13 @@ header>.interface{
     justify-content: space-between;
 }
 header a{
-    color: #5c5c5c;
+    color: #8F8F8F;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
 }
 header a:hover{/*-Quando coloca o cursor no objeto-*/
-    color: white;
+    color: #fff;
     transform:scale(1.05);/*-Zoom-*/
 } 
 header nav ul{
@@ -44,38 +53,39 @@ header nav ul li{
     padding: 10px 40px;
     font-size: 20px;
     font-weight: 600;
-    background-color: #00ff08;
+    background-color: #00D607;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
     transition: .2s;   
 }
+
 button:hover, form .btn_enviar input:hover{
     box-shadow: 0px 0px 8px #00ff08;
     transform: scale(1.05);
 }
-section.topo_site{
-    padding: 5vw 4%;
-    margin-bottom: 150px;
-    
+.topo_site{
+    padding: 13vw 4%;
+    margin-bottom: 40px;
+    margin-top: 100px;
 }
 .flex{
     display: flex;
 }
-section.topo_site .flex{
+.topo_site .flex{
     align-items: center;
     justify-content: center;
     gap: 90px;
 } 
 .topo_site h1{
-    color: white;
+    color: #E8FFE4;
     font-size: 42px;
 }
 .topo_site .lado_esq h1 span{
-    color: #00ff08;
+    color: #00D607;
 }
 .topo_site .lado_esq p{
-    color: white;
+    color: #E8FFE4;
     margin: 40px 0px;
     font-size: 25px;
 }
@@ -95,27 +105,28 @@ section.topo_site .flex{
         top:40px;
     }
 }
-section .desejos{
-    padding: 5vw 4%;
+.desejos{
+    padding: 10vw 4%;
 }
-section.desejos .flex{
+.desejos .flex{
     gap: 60px;
 }
 h2.titulo{
-    color: #00ff08;
+    color: #00D607;
     font-size: 38px;
     text-align: center;
     letter-spacing: 6px;
     font-weight: 700;
 }
 h2.titulo span{
-    color: white;
+    color: #E8FFE4;
 }
 .desejos .desejos_box{
-    color: white; 
+    color: #E8FFE4; 
     padding: 30px 50px;
     border-radius: 20px;
     margin-top: 45px;
+    margin-bottom: 15px;
     transition: .2s;
 }
 .desejos .desejos_box:hover{
@@ -124,7 +135,7 @@ h2.titulo span{
 }
 .desejos .desejos_box i{
     font-size: 70px;
-    color: #00ff08;
+    color: #00D607;
 }
 .desejos .desejos_box h3{
     font-size: 28px;
@@ -133,21 +144,20 @@ h2.titulo span{
 .desejos .desejos_box p{
     word-spacing: 3px;
 }
-section.sobre{
-    padding: 5vw 4%;
-    margin-top: 150px;
+.sobre{
+    padding: 12vw 4%;
     box-shadow: 0 0 40px 10px #ffffff1d;
 }
 .sobre .image_sobre img{
-    width: 25vw;
+    width: 100%;
     border: 3px solid rgba(255, 255, 255, 0.47);
     border-radius: 30px;
     box-shadow: 0px 0px 20px #00ff08;
 }
 .sobre .txt_sobre{
-    color: white;
+    color: #E8FFE4;
 }
-section.sobre .flex{
+.sobre .flex{
     align-items: center;
     gap:70px;
 }
@@ -157,7 +167,7 @@ section.sobre .flex{
     margin-bottom: 30px;
 }
 .sobre .txt_sobre h2 span{
-    color: #00ff08;
+    color: #00D607;
     display: block;
 }
 .sobre .txt_sobre p{
@@ -168,16 +178,34 @@ section.sobre .flex{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid white;
-    background-color: #00ff08;
+    border: 2px solid #E8FFE4;
+    background-color: #00D607;
     font-size: 25px;
     cursor: pointer;
     margin: 20px 8px;
     transition: .2s;
 }
-section.formulario{
-    padding: 5vw 4%;
-    margin-top: 55px;
+.btn_social button:hover{
+    background-color: #E8FFE4;
+    transition: 0.5s;
+}
+.portfolio{
+    padding: 12vw 4%;
+    box-shadow: 0 0 40px 0px #ffffff1d;
+}
+.img_port{
+    width: 670px;
+    height: 560px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+.portfolio .flex{
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.formulario{
+    padding: 13vw 4%;
 }
 form{
     max-width: 500px;
@@ -195,7 +223,7 @@ form input, form textarea{
     outline: 0;
     padding: 20px 15px;
     border-radius: 15px;
-    color: white;
+    color: #fff;
     font-size: 18px;
 }
 form input::placeholder{
@@ -214,8 +242,8 @@ form .btn_enviar{
 }
 form .btn_enviar input{
     width: 120px;
-    background-color: #00ff08;
-    color: black;
+    background-color: #00D607;
+    color: #000405;
     font-weight: 600;
     cursor: pointer;
     transition: .2s;
@@ -223,7 +251,7 @@ form .btn_enviar input{
 footer .logo_footer img{
     width: 100px;
     border-radius: 50px;
-    border: 3px solid #000000;
+    border: 3px solid #000405;
     box-shadow:0px 2px 5px #00ff08 ;
 }
 footer{
@@ -234,17 +262,17 @@ footer .flex{
     justify-content: space-between;
 }
 .borda{
-    border-top: 2px solid #00ff08;
+    border-top: 2px solid #00D607;
 }
 footer .linha_footer{
     padding: 20px 0;
 }
 footer .linha_footer p i{
-    color: #00ff08;
+    color: #00D607;
     font-size: 25px;
 }
 footer .linha_footer p a{
-    color: white;
+    color: #fff;
     text-decoration: none;
     margin-left: 10px;
 }
