@@ -66,8 +66,6 @@ button:hover, form .btn_enviar input:hover{
 }
 .topo_site{
     padding: 13vw 4%;
-    margin-bottom: 40px;
-    margin-top: 100px;
 }
 .flex{
     display: flex;
@@ -90,8 +88,8 @@ button:hover, form .btn_enviar input:hover{
     font-size: 25px;
 }
 .topo_site .image img{
-    width: 25vw;
-    border-radius: 40%;
+    width: 20vw;
+    border-radius: 20%;
     border: 3px solid #5c5c5c;
     box-shadow: 0px 5px 20px #00ff08;
     position: relative;
@@ -192,7 +190,7 @@ h2.titulo span{
 
 }
 .projetos{
-    padding: 12vw 4%;
+    padding: 11vw 4%;
     box-shadow: 0 0 40px 0px #ffffff1d;
 }
 .img_port{
